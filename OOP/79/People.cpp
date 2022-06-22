@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 using namespace std;
 class People {
@@ -26,7 +27,7 @@ class People {
             return job;
         }
         string getId(){
-            return jd;
+            return id;
         }
         void setName(string name){
             this->name=name;
@@ -40,10 +41,11 @@ class People {
         void setId(string id){
             this->id=id;
         }
-        void display(){
-            cout<<"Name: "<<name<<endl;
-            cout<<"Age: "<<age<<endl;
-            cout<<"Job: "<<job<<endl;
-            cout<<"Id: "<<id<<endl;
+        virtual void display(){
+            cout<<" Name: "<<name<<endl;
+            cout<<"  Age: "<<age<<endl;
+            cout<<"  Job: "<<job<<endl;
+            cout<<"   Id: "<<id<<endl;
+            cout<<"-------------------------------------"<<endl;
         }
 };
